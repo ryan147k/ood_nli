@@ -1,0 +1,299 @@
+nohup: ignoring input
+0lines [00:00, ?lines/s]27728lines [00:00, 277273.65lines/s]56041lines [00:00, 280715.93lines/s]84412lines [00:00, 282082.27lines/s]112621lines [00:00, 280819.60lines/s]140704lines [00:00, 278409.48lines/s]168549lines [00:00, 278143.32lines/s]196366lines [00:00, 276263.84lines/s]224030lines [00:00, 276382.44lines/s]251671lines [00:00, 275753.43lines/s]279248lines [00:01, 274465.80lines/s]306697lines [00:01, 273469.22lines/s]334046lines [00:01, 272181.14lines/s]361423lines [00:01, 272654.50lines/s]388690lines [00:01, 272186.76lines/s]415910lines [00:01, 272154.43lines/s]443126lines [00:01, 271311.15lines/s]470258lines [00:01, 270645.23lines/s]497324lines [00:01, 269733.27lines/s]524298lines [00:01, 269574.95lines/s]551256lines [00:02, 268944.15lines/s]570152lines [00:02, 272817.22lines/s]
+Namespace(batch_size=210, dropout=0.25, epoch_num=1000, lr=0.001, weight_decay=0.001)
+DiSANN(
+  (embedding): Embedding(40298, 300)
+  (dropout): Dropout(p=0.25, inplace=False)
+  (elu): ELU(alpha=1.0)
+  (disan): DiSAN(
+    (fw_DiSA): DiSA(
+      (fc): Linear(in_features=300, out_features=300, bias=True)
+      (w_1): Linear(in_features=300, out_features=300, bias=True)
+      (w_2): Linear(in_features=300, out_features=300, bias=True)
+      (w_f1): Linear(in_features=300, out_features=300, bias=True)
+      (w_f2): Linear(in_features=300, out_features=300, bias=True)
+      (elu): ELU(alpha=1.0)
+      (tanh): Tanh()
+      (softmax): Softmax(dim=-2)
+      (sigmoid): Sigmoid()
+      (dropout): Dropout(p=0.25, inplace=False)
+    )
+    (bw_DiSA): DiSA(
+      (fc): Linear(in_features=300, out_features=300, bias=True)
+      (w_1): Linear(in_features=300, out_features=300, bias=True)
+      (w_2): Linear(in_features=300, out_features=300, bias=True)
+      (w_f1): Linear(in_features=300, out_features=300, bias=True)
+      (w_f2): Linear(in_features=300, out_features=300, bias=True)
+      (elu): ELU(alpha=1.0)
+      (tanh): Tanh()
+      (softmax): Softmax(dim=-2)
+      (sigmoid): Sigmoid()
+      (dropout): Dropout(p=0.25, inplace=False)
+    )
+    (source2token): Source2Token(
+      (fc1): Linear(in_features=600, out_features=600, bias=True)
+      (fc2): Linear(in_features=600, out_features=600, bias=True)
+      (elu): ELU(alpha=1.0)
+      (softmax): Softmax(dim=-2)
+      (dropout): Dropout(p=0.25, inplace=False)
+    )
+  )
+  (fc): Linear(in_features=2400, out_features=300, bias=True)
+  (fc_out): Linear(in_features=300, out_features=3, bias=True)
+)
+
+Epoch 1
+	 correct: 374329 total: 550152
+	 trian loss: 0.7365 acc: 0.68
+	 val   loss: 0.008369 val_acc: 0.736
+	 test  loss: 0.008481 val_acc: 0.735
+
+Epoch 2
+	 correct: 413823 total: 550152
+	 trian loss: 0.6032 acc: 0.752
+	 val   loss: 0.008332 val_acc: 0.76
+	 test  loss: 0.007716 val_acc: 0.758
+
+Epoch 3
+	 correct: 429191 total: 550152
+	 trian loss: 0.5457 acc: 0.78
+	 val   loss: 0.008268 val_acc: 0.768
+	 test  loss: 0.007092 val_acc: 0.769
+
+Epoch 4
+	 correct: 438666 total: 550152
+	 trian loss: 0.5076 acc: 0.797
+	 val   loss: 0.007509 val_acc: 0.78
+	 test  loss: 0.007517 val_acc: 0.774
+
+Epoch 5
+	 correct: 445929 total: 550152
+	 trian loss: 0.479 acc: 0.811
+	 val   loss: 0.007028 val_acc: 0.788
+	 test  loss: 0.007414 val_acc: 0.778
+
+Epoch 6
+	 correct: 451447 total: 550152
+	 trian loss: 0.4559 acc: 0.821
+	 val   loss: 0.007144 val_acc: 0.789
+	 test  loss: 0.007578 val_acc: 0.777
+
+Epoch 7
+	 correct: 455944 total: 550152
+	 trian loss: 0.4372 acc: 0.829
+	 val   loss: 0.009299 val_acc: 0.785
+	 test  loss: 0.008823 val_acc: 0.78
+
+Epoch 8
+	 correct: 459620 total: 550152
+	 trian loss: 0.421 acc: 0.835
+	 val   loss: 0.007789 val_acc: 0.784
+	 test  loss: 0.007766 val_acc: 0.781
+
+Epoch 9
+	 correct: 462580 total: 550152
+	 trian loss: 0.408 acc: 0.841
+	 val   loss: 0.0077 val_acc: 0.783
+	 test  loss: 0.00785 val_acc: 0.774
+
+Epoch 10
+	 correct: 465371 total: 550152
+	 trian loss: 0.3958 acc: 0.846
+	 val   loss: 0.007422 val_acc: 0.786
+	 test  loss: 0.008286 val_acc: 0.78
+
+Epoch 11
+	 correct: 467099 total: 550152
+	 trian loss: 0.3878 acc: 0.849
+	 val   loss: 0.007486 val_acc: 0.785
+	 test  loss: 0.01026 val_acc: 0.777
+
+Epoch 12
+	 correct: 469135 total: 550152
+	 trian loss: 0.3802 acc: 0.853
+	 val   loss: 0.009436 val_acc: 0.783
+	 test  loss: 0.008087 val_acc: 0.778
+
+Epoch 13
+	 correct: 470610 total: 550152
+	 trian loss: 0.3726 acc: 0.855
+	 val   loss: 0.008864 val_acc: 0.783
+	 test  loss: 0.006746 val_acc: 0.773
+
+Epoch 14
+	 correct: 471778 total: 550152
+	 trian loss: 0.3671 acc: 0.858
+	 val   loss: 0.007761 val_acc: 0.787
+	 test  loss: 0.009481 val_acc: 0.779
+
+Epoch 15
+	 correct: 473437 total: 550152
+	 trian loss: 0.3612 acc: 0.861
+	 val   loss: 0.009464 val_acc: 0.782
+	 test  loss: 0.005907 val_acc: 0.773
+
+Epoch 16
+	 correct: 474866 total: 550152
+	 trian loss: 0.3552 acc: 0.863
+	 val   loss: 0.007221 val_acc: 0.787
+	 test  loss: 0.008608 val_acc: 0.771
+
+Epoch 17
+	 correct: 475328 total: 550152
+	 trian loss: 0.3523 acc: 0.864
+	 val   loss: 0.007719 val_acc: 0.782
+	 test  loss: 0.006938 val_acc: 0.774
+
+Epoch 18
+	 correct: 475928 total: 550152
+	 trian loss: 0.3486 acc: 0.865
+	 val   loss: 0.005835 val_acc: 0.782
+	 test  loss: 0.009654 val_acc: 0.771
+
+Epoch 19
+	 correct: 476929 total: 550152
+	 trian loss: 0.345 acc: 0.867
+	 val   loss: 0.007469 val_acc: 0.781
+	 test  loss: 0.01025 val_acc: 0.776
+
+Epoch 20
+	 correct: 477664 total: 550152
+	 trian loss: 0.3406 acc: 0.868
+	 val   loss: 0.007824 val_acc: 0.782
+	 test  loss: 0.008374 val_acc: 0.774
+
+Epoch 21
+	 correct: 478706 total: 550152
+	 trian loss: 0.3369 acc: 0.87
+	 val   loss: 0.008313 val_acc: 0.778
+	 test  loss: 0.01006 val_acc: 0.771
+
+Epoch 22
+	 correct: 479069 total: 550152
+	 trian loss: 0.3358 acc: 0.871
+	 val   loss: 0.00682 val_acc: 0.78
+	 test  loss: 0.005843 val_acc: 0.768
+
+Epoch 23
+	 correct: 479984 total: 550152
+	 trian loss: 0.3328 acc: 0.872
+	 val   loss: 0.006068 val_acc: 0.778
+	 test  loss: 0.008601 val_acc: 0.771
+
+Epoch 24
+	 correct: 480313 total: 550152
+	 trian loss: 0.3305 acc: 0.873
+	 val   loss: 0.009663 val_acc: 0.781
+	 test  loss: 0.007062 val_acc: 0.769
+
+Epoch 25
+	 correct: 480763 total: 550152
+	 trian loss: 0.3283 acc: 0.874
+	 val   loss: 0.008781 val_acc: 0.781
+	 test  loss: 0.008434 val_acc: 0.772
+
+Epoch 26
+	 correct: 481214 total: 550152
+	 trian loss: 0.3267 acc: 0.875
+	 val   loss: 0.0103 val_acc: 0.773
+	 test  loss: 0.007669 val_acc: 0.768
+
+Epoch 27
+	 correct: 481516 total: 550152
+	 trian loss: 0.3243 acc: 0.875
+	 val   loss: 0.008233 val_acc: 0.782
+	 test  loss: 0.007502 val_acc: 0.77
+
+Epoch 28
+	 correct: 482106 total: 550152
+	 trian loss: 0.3225 acc: 0.876
+	 val   loss: 0.008261 val_acc: 0.774
+	 test  loss: 0.01015 val_acc: 0.769
+
+Epoch 29
+	 correct: 482290 total: 550152
+	 trian loss: 0.3214 acc: 0.877
+	 val   loss: 0.009216 val_acc: 0.776
+	 test  loss: 0.01034 val_acc: 0.772
+
+Epoch 30
+	 correct: 482705 total: 550152
+	 trian loss: 0.3199 acc: 0.877
+	 val   loss: 0.006916 val_acc: 0.776
+	 test  loss: 0.009263 val_acc: 0.77
+
+Epoch 31
+	 correct: 483286 total: 550152
+	 trian loss: 0.3173 acc: 0.878
+	 val   loss: 0.008552 val_acc: 0.781
+	 test  loss: 0.00943 val_acc: 0.775
+
+Epoch 32
+	 correct: 483617 total: 550152
+	 trian loss: 0.3159 acc: 0.879
+	 val   loss: 0.007514 val_acc: 0.783
+	 test  loss: 0.008301 val_acc: 0.764
+
+Epoch 33
+	 correct: 483912 total: 550152
+	 trian loss: 0.315 acc: 0.88
+	 val   loss: 0.009506 val_acc: 0.775
+	 test  loss: 0.009172 val_acc: 0.763
+
+Epoch 34
+	 correct: 484132 total: 550152
+	 trian loss: 0.3137 acc: 0.88
+	 val   loss: 0.01039 val_acc: 0.775
+	 test  loss: 0.007524 val_acc: 0.773
+
+Epoch 35
+	 correct: 484766 total: 550152
+	 trian loss: 0.3109 acc: 0.881
+	 val   loss: 0.008849 val_acc: 0.778
+	 test  loss: 0.00932 val_acc: 0.76
+
+Epoch 36
+	 correct: 484838 total: 550152
+	 trian loss: 0.3103 acc: 0.881
+	 val   loss: 0.01047 val_acc: 0.776
+	 test  loss: 0.00793 val_acc: 0.766
+
+Epoch 37
+	 correct: 484839 total: 550152
+	 trian loss: 0.3097 acc: 0.881
+	 val   loss: 0.009859 val_acc: 0.778
+	 test  loss: 0.005279 val_acc: 0.768
+
+Epoch 38
+	 correct: 485241 total: 550152
+	 trian loss: 0.3084 acc: 0.882
+	 val   loss: 0.0112 val_acc: 0.779
+	 test  loss: 0.01109 val_acc: 0.766
+
+Epoch 39
+	 correct: 485771 total: 550152
+	 trian loss: 0.3074 acc: 0.883
+	 val   loss: 0.008191 val_acc: 0.781
+	 test  loss: 0.007258 val_acc: 0.771
+
+Epoch 40
+	 correct: 485985 total: 550152
+	 trian loss: 0.3061 acc: 0.883
+	 val   loss: 0.01098 val_acc: 0.782
+	 test  loss: 0.01049 val_acc: 0.773
+
+Epoch 41
+	 correct: 486216 total: 550152
+	 trian loss: 0.3041 acc: 0.884
+	 val   loss: 0.0111 val_acc: 0.774
+	 test  loss: 0.007121 val_acc: 0.774
+
+Epoch 42
+	 correct: 485807 total: 550152
+	 trian loss: 0.3052 acc: 0.883
+	 val   loss: 0.009035 val_acc: 0.773
+	 test  loss: 0.01231 val_acc: 0.77
+
+
+Best Val Acc: 0.789 Epoch: 6
+Best Test Acc: 0.781 Epoch: 8

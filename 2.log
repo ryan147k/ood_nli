@@ -1,0 +1,250 @@
+nohup: ignoring input
+0lines [00:00, ?lines/s]24215lines [00:00, 242146.19lines/s]48558lines [00:00, 242900.82lines/s]72849lines [00:00, 241155.83lines/s]96967lines [00:00, 236346.28lines/s]120615lines [00:00, 235288.69lines/s]144152lines [00:00, 233190.66lines/s]167478lines [00:00, 229758.54lines/s]190464lines [00:00, 225750.37lines/s]213053lines [00:00, 224396.38lines/s]235501lines [00:01, 223946.20lines/s]257900lines [00:01, 208529.95lines/s]278946lines [00:01, 206961.38lines/s]299771lines [00:01, 188902.00lines/s]318999lines [00:01, 183808.53lines/s]337604lines [00:01, 178354.50lines/s]355590lines [00:01, 161614.83lines/s]377623lines [00:01, 176977.93lines/s]395770lines [00:01, 170132.33lines/s]413108lines [00:02, 170448.14lines/s]432356lines [00:02, 176573.28lines/s]450223lines [00:02, 161189.41lines/s]468408lines [00:02, 166762.68lines/s]485400lines [00:02, 156971.63lines/s]504910lines [00:02, 167312.83lines/s]525481lines [00:02, 178033.14lines/s]545781lines [00:02, 185152.90lines/s]564987lines [00:02, 187150.03lines/s]570152lines [00:02, 192576.40lines/s]
+Namespace(batch_size=512, epoch_num=1000, lr=0.001, weight_decay=0.001)
+BiLSTM(
+  (embedding): Embedding(40298, 100)
+  (bilstm): LSTM(100, 256, num_layers=2, batch_first=True, bidirectional=True)
+  (linear): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): ReLU()
+  )
+  (predict): Linear(in_features=256, out_features=3, bias=True)
+)
+/data/hurui/env/anaconda3/envs/text/lib/python3.8/site-packages/torch/nn/modules/rnn.py:661: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  /opt/conda/conda-bld/pytorch_1614378062065/work/aten/src/ATen/native/cudnn/RNN.cpp:915.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+
+Epoch 1
+	 correct: 341348 total: 550152
+	 trian loss: 0.8261 acc: 0.62
+	 val   loss: 0.01809 val_acc: 0.699
+	 test  loss: 0.01997 val_acc: 0.704
+
+Epoch 2
+	 correct: 399023 total: 550152
+	 trian loss: 0.6578 acc: 0.725
+	 val   loss: 0.01731 val_acc: 0.736
+	 test  loss: 0.01615 val_acc: 0.737
+
+Epoch 3
+	 correct: 419412 total: 550152
+	 trian loss: 0.5837 acc: 0.762
+	 val   loss: 0.01876 val_acc: 0.756
+	 test  loss: 0.0162 val_acc: 0.755
+
+Epoch 4
+	 correct: 434768 total: 550152
+	 trian loss: 0.5259 acc: 0.79
+	 val   loss: 0.01624 val_acc: 0.767
+	 test  loss: 0.01586 val_acc: 0.76
+
+Epoch 5
+	 correct: 447075 total: 550152
+	 trian loss: 0.4769 acc: 0.813
+	 val   loss: 0.01479 val_acc: 0.774
+	 test  loss: 0.01593 val_acc: 0.765
+
+Epoch 6
+	 correct: 457890 total: 550152
+	 trian loss: 0.4332 acc: 0.832
+	 val   loss: 0.01418 val_acc: 0.779
+	 test  loss: 0.01506 val_acc: 0.776
+
+Epoch 7
+	 correct: 467553 total: 550152
+	 trian loss: 0.3925 acc: 0.85
+	 val   loss: 0.02047 val_acc: 0.774
+	 test  loss: 0.01555 val_acc: 0.772
+
+Epoch 8
+	 correct: 476468 total: 550152
+	 trian loss: 0.3546 acc: 0.866
+	 val   loss: 0.01504 val_acc: 0.78
+	 test  loss: 0.01784 val_acc: 0.774
+
+Epoch 9
+	 correct: 483752 total: 550152
+	 trian loss: 0.3213 acc: 0.879
+	 val   loss: 0.01918 val_acc: 0.774
+	 test  loss: 0.0186 val_acc: 0.776
+
+Epoch 10
+	 correct: 491016 total: 550152
+	 trian loss: 0.2889 acc: 0.893
+	 val   loss: 0.02063 val_acc: 0.777
+	 test  loss: 0.02044 val_acc: 0.77
+
+Epoch 11
+	 correct: 496929 total: 550152
+	 trian loss: 0.2608 acc: 0.903
+	 val   loss: 0.01636 val_acc: 0.773
+	 test  loss: 0.02355 val_acc: 0.77
+
+Epoch 12
+	 correct: 503166 total: 550152
+	 trian loss: 0.2335 acc: 0.915
+	 val   loss: 0.02806 val_acc: 0.77
+	 test  loss: 0.0275 val_acc: 0.77
+
+Epoch 13
+	 correct: 507850 total: 550152
+	 trian loss: 0.2102 acc: 0.923
+	 val   loss: 0.02404 val_acc: 0.772
+	 test  loss: 0.02248 val_acc: 0.767
+
+Epoch 14
+	 correct: 511973 total: 550152
+	 trian loss: 0.1899 acc: 0.931
+	 val   loss: 0.02591 val_acc: 0.766
+	 test  loss: 0.03102 val_acc: 0.761
+
+Epoch 15
+	 correct: 516254 total: 550152
+	 trian loss: 0.1691 acc: 0.938
+	 val   loss: 0.03057 val_acc: 0.763
+	 test  loss: 0.0292 val_acc: 0.759
+
+Epoch 16
+	 correct: 519642 total: 550152
+	 trian loss: 0.1518 acc: 0.945
+	 val   loss: 0.0234 val_acc: 0.768
+	 test  loss: 0.02882 val_acc: 0.767
+
+Epoch 17
+	 correct: 522648 total: 550152
+	 trian loss: 0.1375 acc: 0.95
+	 val   loss: 0.02093 val_acc: 0.764
+	 test  loss: 0.02147 val_acc: 0.762
+
+Epoch 18
+	 correct: 525155 total: 550152
+	 trian loss: 0.1243 acc: 0.955
+	 val   loss: 0.02696 val_acc: 0.764
+	 test  loss: 0.0242 val_acc: 0.764
+
+Epoch 19
+	 correct: 527726 total: 550152
+	 trian loss: 0.1125 acc: 0.959
+	 val   loss: 0.03669 val_acc: 0.764
+	 test  loss: 0.02861 val_acc: 0.761
+
+Epoch 20
+	 correct: 529797 total: 550152
+	 trian loss: 0.1012 acc: 0.963
+	 val   loss: 0.03893 val_acc: 0.76
+	 test  loss: 0.03106 val_acc: 0.759
+
+Epoch 21
+	 correct: 531403 total: 550152
+	 trian loss: 0.09317 acc: 0.966
+	 val   loss: 0.04105 val_acc: 0.764
+	 test  loss: 0.04445 val_acc: 0.761
+
+Epoch 22
+	 correct: 533022 total: 550152
+	 trian loss: 0.08521 acc: 0.969
+	 val   loss: 0.02987 val_acc: 0.762
+	 test  loss: 0.03852 val_acc: 0.759
+
+Epoch 23
+	 correct: 534506 total: 550152
+	 trian loss: 0.07815 acc: 0.972
+	 val   loss: 0.03091 val_acc: 0.759
+	 test  loss: 0.04757 val_acc: 0.756
+
+Epoch 24
+	 correct: 535764 total: 550152
+	 trian loss: 0.07229 acc: 0.974
+	 val   loss: 0.03394 val_acc: 0.761
+	 test  loss: 0.03086 val_acc: 0.754
+
+Epoch 25
+	 correct: 536724 total: 550152
+	 trian loss: 0.0671 acc: 0.976
+	 val   loss: 0.0333 val_acc: 0.761
+	 test  loss: 0.03732 val_acc: 0.761
+
+Epoch 26
+	 correct: 537941 total: 550152
+	 trian loss: 0.06186 acc: 0.978
+	 val   loss: 0.03731 val_acc: 0.758
+	 test  loss: 0.03998 val_acc: 0.754
+
+Epoch 27
+	 correct: 538496 total: 550152
+	 trian loss: 0.05902 acc: 0.979
+	 val   loss: 0.03925 val_acc: 0.76
+	 test  loss: 0.05021 val_acc: 0.759
+
+Epoch 28
+	 correct: 539257 total: 550152
+	 trian loss: 0.05522 acc: 0.98
+	 val   loss: 0.04033 val_acc: 0.759
+	 test  loss: 0.04132 val_acc: 0.754
+
+Epoch 29
+	 correct: 539602 total: 550152
+	 trian loss: 0.05364 acc: 0.981
+	 val   loss: 0.05223 val_acc: 0.76
+	 test  loss: 0.03537 val_acc: 0.755
+
+Epoch 30
+	 correct: 540270 total: 550152
+	 trian loss: 0.05056 acc: 0.982
+	 val   loss: 0.03603 val_acc: 0.758
+	 test  loss: 0.04127 val_acc: 0.757
+
+Epoch 31
+	 correct: 540260 total: 550152
+	 trian loss: 0.05023 acc: 0.982
+	 val   loss: 0.04665 val_acc: 0.758
+	 test  loss: 0.04167 val_acc: 0.756
+
+Epoch 32
+	 correct: 540978 total: 550152
+	 trian loss: 0.04789 acc: 0.983
+	 val   loss: 0.02962 val_acc: 0.763
+	 test  loss: 0.03921 val_acc: 0.755
+
+Epoch 33
+	 correct: 540991 total: 550152
+	 trian loss: 0.0469 acc: 0.983
+	 val   loss: 0.03783 val_acc: 0.761
+	 test  loss: 0.03939 val_acc: 0.758
+
+Epoch 34
+	 correct: 541531 total: 550152
+	 trian loss: 0.0443 acc: 0.984
+	 val   loss: 0.04722 val_acc: 0.764
+	 test  loss: 0.04269 val_acc: 0.759
+
+Epoch 35
+	 correct: 541650 total: 550152
+	 trian loss: 0.04386 acc: 0.985
+	 val   loss: 0.03372 val_acc: 0.765
+	 test  loss: 0.03636 val_acc: 0.752
+
+Epoch 36
+	 correct: 541669 total: 550152
+	 trian loss: 0.04378 acc: 0.985
+	 val   loss: 0.03253 val_acc: 0.76
+	 test  loss: 0.03883 val_acc: 0.756
+
+Epoch 37
+	 correct: 542263 total: 550152
+	 trian loss: 0.0409 acc: 0.986
+	 val   loss: 0.03714 val_acc: 0.765
+	 test  loss: 0.02882 val_acc: 0.753
+
+Epoch 38
+	 correct: 542128 total: 550152
+	 trian loss: 0.04134 acc: 0.985
+	 val   loss: 0.04269 val_acc: 0.757
+	 test  loss: 0.03977 val_acc: 0.757
+
+
+Best Val Acc: 0.78 Epoch: 8
+Best Test Acc: 0.776 Epoch: 6
